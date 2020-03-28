@@ -1,11 +1,11 @@
-def subarray_sum(arr, sum) -> int:
+def subarray_sum(arr: [], sum: int) -> []:
     current_sum = arr[0]
     n = len(arr)
     start = 0
     for i in range(1, n):
         print(start, current_sum)
         if current_sum == sum:
-            return start+1, i
+            return start + 1, i
         elif current_sum > sum:
             while current_sum > sum and current_sum >= 0:
                 current_sum -= arr[start]
